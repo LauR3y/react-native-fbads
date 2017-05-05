@@ -51,6 +51,11 @@ class NativeAdsManager {
    * callers will be notified of a change
    */
   _listenForStateChanges() {
+    NativeAppEventEmitter.addListener('CTKNativeAdsManagersError', (error) => {
+      if (typeof this.onError === 'function') {
+        this.onError(error);
+      }
+    });
     NativeAppEventEmitter.addListener('CTKNativeAdsManagersChanged', (managers) => {
       const isValidNew = managers[this.placementId];
       const isValid = this.isValid;
