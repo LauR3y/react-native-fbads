@@ -62,7 +62,7 @@ export default (Component: Function) => class NativeAdWrapper extends React.Comp
     const { adsManager, ...props } = this.props;
 
     if (!this.state.canRequestAds) {
-      return null;
+      return <Component canRequestAds={this.state.canRequestAds} nativeAd={null} {...props} />;
     }
 
     return (
@@ -70,7 +70,7 @@ export default (Component: Function) => class NativeAdWrapper extends React.Comp
         adsManager={adsManager.toJSON()}
         onAdLoaded={(e) => this.setState({ ad: e.nativeEvent })}
       >
-        {this.state.ad && <Component nativeAd={this.state.ad} {...props} />}
+        <Component nativeAd={this.state.ad} {...props} />
       </NativeAdView>
     );
   }
