@@ -8,7 +8,7 @@
 
 #import <React/RCTView.h>
 #import <React/RCTComponent.h>
-@import UIKit;
+#import <UIKit/UIKit.h>;
 
 @interface CTKBannerView : UIView
 

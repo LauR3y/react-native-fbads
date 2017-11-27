@@ -6,7 +6,7 @@
 //  Copyright © 2017 callstack. All rights reserved.
 //
 
-@import FBAudienceNetwork;
+#import "FBAudienceNetwork.h";
 #import "CTKBannerView.h"
 #import <React/RCTUtils.h>
 

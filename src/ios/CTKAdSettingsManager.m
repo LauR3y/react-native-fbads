@@ -9,7 +9,7 @@
 #import "CTKAdSettingsManager.h"
 #import <React/RCTUtils.h>
 #import <React/RCTConvert.h>
-@import FBAudienceNetwork;
+#import "FBAudienceNetwork.h";
 
 @implementation RCTConvert (CTKNativeAdView)
 

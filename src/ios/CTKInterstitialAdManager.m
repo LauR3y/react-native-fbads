@@ -8,7 +8,7 @@
 
 #import "CTKInterstitialAdManager.h"
 #import <React/RCTUtils.h>
-@import FBAudienceNetwork;
+#import "FBAudienceNetwork.h";
 
 @interface CTKInterstitialAdManager () <FBInterstitialAdDelegate>
 
